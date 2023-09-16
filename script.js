@@ -27,7 +27,6 @@ function checkWinner() {
     return null;
 }
 
-// Função para lidar com o clique em uma célula
 function cellClick(index) {
     if (!gameOver && !gameBoard[index]) {
         gameBoard[index] = currentPlayer;
@@ -45,10 +44,11 @@ function cellClick(index) {
     }
 }
 
-// Adicione eventos de clique às células
 const cells = document.querySelectorAll('#game-board td');
 cells.forEach((cell, index) => {
     cell.addEventListener('click', () => {
         cellClick(index);
     });
 });
+
+
